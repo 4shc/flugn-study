@@ -13,3 +13,13 @@ Como sabras este es el nuevo proyecto que sustituye al DEV4S que creamos en un i
 - ```npm create vite@latest .```Crea el proyecto en el mismo directorio
 - ``` √ Select a framework: » React```
 - ``` √ Select a variant: » JavaScript + SWC```
+- ``` npm install --save react-router-dom``` Instalación react routing
+
+
+#
+#
+#
+
+# Utilidades
+- Estructura de carpetas que vamos a usar implementar https://www.youtube.com/watch?v=jpvNc4yPaNU
+

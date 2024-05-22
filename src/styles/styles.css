@@ -1,0 +1,347 @@
+/* ESTILOS PARA EL NAV */
+nav li{
+  border: none;
+  text-align: left;
+  padding: .5em;
+  margin: 0;
+}
+body{
+  position: relative;
+}
+section details[open]{
+  background-color: #37383b;
+}
+.section-head{
+  display: flex;
+  justify-content: space-between;
+}
+nav{
+  position: sticky;
+  top: 10px;
+}
+.nav ul{
+  padding: 0;
+}
+.nav{
+  overflow:auto;
+  font-size: .8em;
+  text-align: center;
+}
+.nav::-webkit-scrollbar {
+  width: 2px;
+  height: 2px;
+}
+.nav__toggle,
+.nav__checkbox
+{
+  display: none;
+}
+.menus {
+  list-style-type: none;
+  display: grid;
+  gap: .7em;
+  grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+}
+.menus li {
+  /* border: solid yellow 1px; */
+  background-color: #33333310;
+}
+/* Estilos para el enlace de menú */
+.menus li a {
+  text-decoration: none;
+  color: #333; /* Color del texto del menú */
+  transition: color 0.3s; /* Transición de color al pasar el mouse */
+}
+
+.menus li a:hover {
+  color: #d0ff00; /* Color del texto del menú al pasar el mouse */
+}
+@media screen and (max-width:768px) {
+    h1{
+      font-size: 1.5em;
+    }
+    .menus{
+      display: none;
+    }
+    .nav__toggle, .nav__checkbox{
+      display: inline-block;
+    }
+    //HAMBURGUESA
+     .nav__toggle{
+     cursor: pointer;
+     -webkit-transition: transform 0.5s 0.1s ease-in-out;
+     -moz-transition: transform 0.5s 0.1s ease-in-out;
+     -o-transition: transform 0.5s 0.1s ease-in-out;
+     transition: transform 0.5s 0.1s ease-in-out;
+     }
+     .nav__toggle:hover{
+         -webkit-transform: translateY(-5px) rotateY(-5deg);
+     }
+     .nav__toggle svg{
+     width: 1.7rem;
+     fill: rgb(86, 82, 82); /*[fill] Permite cambiar el color al SVG*/
+     }
+     .nav__toggle .close{
+     display: none;
+     background: none;
+     }
+     .nav__toggle .close,
+     .nav__toggle .menu{
+     margin-top: 0.3rem;
+     }
+     .nav__checkbox{
+     display: none;
+     }
+     #nav__checkbox:checked ~ .menus{ /*hace que a dar click en el checkbos se desplegue los li, que estaban con display none*/
+     display: flex;
+     flex-direction: column;
+     box-sizing: border-box;
+     width: 100%;
+     }
+     #nav__checkbox:checked ~ label.nav__toggle .close{ /*en este caso hace que se muestre el svg o icono de cerrar o close que esta con display none*/
+     display: block;
+     }
+     #nav__checkbox:checked ~ label.nav__toggle .menu{ /*oculta el svf o icnono de la amburquesa para que solo se vea la x*/
+    display: none;
+     }
+ }
+
+
+/* ESTILOS GENERALES */
+::-webkit-scrollbar {
+     width: 1px;
+     height: 1px;
+}
+::-webkit-scrollbar-thumb{
+     background: radial-gradient(circle, #e8eb21 18%,#c8387b 77%);
+     border-radius: 30px;
+}
+::-webkit-scrollbar-thumb:hover{
+     background: radial-gradient(circle, #c8387b 18%,#e8eb21 77%);
+}
+::-webkit-scrollbar-track{
+     background: #FDFDBF;
+     border-radius: 0px;
+     box-shadow: inset -10px 0px 0px 0px;
+}
+html{
+  scroll-behavior: smooth;
+}
+html *{
+  box-sizing: border-box;
+}
+body{
+  background-color: #202123;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #a5a7a8;
+  font-size: 21px;
+}
+header{
+  margin: 0 1em;
+}
+section{
+  padding: 0 1em;
+  margin-bottom: 4em;
+}
+p{
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+b{
+  color: #c8387b;
+}
+#head{
+  display: flex;
+  justify-content: space-between;
+}
+small:nth-child(2){
+  background-color: #00000040;
+  padding: 0 7px; 
+  border-radius: 2px;
+}
+details{
+  cursor: pointer;
+  margin-bottom: 3em;
+  border-bottom: 2px solid #8c900f;
+  border-right: 2px solid #8c900f;
+  position: relative;
+  border: #c8387b solid greenyellow;
+  padding-left: .5em;
+
+}
+details > details{
+  margin-bottom: 1em;
+}
+.closes{
+  appearance: none;
+  -webkit-appearance: none; /* Para compatibilidad con navegadores WebKit */
+  -moz-appearance: none; /* Para compatibilidad con navegadores basados en Gecko (Firefox) */
+  border: none;
+  margin: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  top: 4em;
+  right: 2em;
+  color: white;
+}
+#miBoton{
+  display: none;
+}
+ul, ol{
+  display:flex;
+  width: 100%;
+  overflow-x: auto;
+  gap: 22px;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+.colum{
+  flex-direction: column;
+}
+li{
+  min-width: 100%;
+  margin-left: 1em;
+  padding-right: 1em;
+  padding-top: 1em;
+  border: 1px dashed transparent;
+  border-image: linear-gradient(-30deg, #202123 80%, #ecf803) 1;
+  text-align: center;
+}
+li::marker{
+  color:#c8387b;
+}
+li img{
+  margin-top: 2em;
+}
+summary{
+  position: sticky;
+  top: 0;
+  z-index: 99999999999999999999999999;
+  background-color: #202123c3;
+  padding-bottom: .1em;
+  margin-left: -.5em;
+  padding: .5em;
+}
+summary:active{
+  color: #8c900f;
+}
+a{
+  color:#8c900f;
+  font-family: ;
+}
+h1,h2{
+  background: linear-gradient(130deg, #d9e010,#c8387b,#e8eb21);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+h2{
+  border-top: 1px #818196 solid; 
+  padding-top: .4em;
+}
+h3, h4, h5, h6{
+  background: linear-gradient(-130deg, #d9e010,#c8387b,#e8eb21);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.opacity{
+  opacity: .5;
+  filter: sepia(3);
+  font-weight: 100;
+}
+summary img{
+  margin-top: 1em;
+}
+summary img:hover{
+  transform: scale(1);
+}
+img{
+  border-radius: .3em;
+  display: block;
+  opacity: .9;
+  filter: invert(.7);
+  transition: ease-in-out .3s .2s;
+  width: 100%;
+  max-width: 960px;
+}
+.imgMedium{
+  width: 50%;
+}
+u{
+  text-decoration-color: #c8387b ;
+}
+img:hover{
+  filter: none;
+  cursor:pointer;
+  transform: scale(1.01) translateY(-11px);
+  opacity: 9000990;
+}
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  gap: .3em;
+  position: relative;
+
+/*   flex-direction: column;
+  align-items: end; */
+}
+p.top {
+  position: fixed;
+  padding-top: .1em;
+  bottom: 22px;
+  right: 22px;
+  opacity: .3;
+  transition: ease-in-out opacity .4s, ease-in-out transform .4s, ease-in-out height .4s;
+  height: 22px;
+}
+
+p.top:hover {
+  padding-top: 0;
+  opacity: 1;
+  transform: scale(1.1) translateY(2px);
+  height: 33px;
+}
+p.top a{
+  text-decoration: none;
+}
+footer p{
+  background: black;
+  opacity: .5;
+  padding: 0 12px;
+  border-radius: .7em;
+  font-size: .8em;
+}
+footer:hover img {
+  opacity:1;
+}
+.top{
+  position: absolute;
+}
+@media screen and (min-width: 1200px){
+  li{
+    min-width: 60%;
+  }
+  header{
+    margin: 0 4em;
+  }
+  section{
+    padding: 0 4em;
+
+  }
+}
+@media screen and (max-width: 420px){
+  body{
+    font-size: 16px;
+  }
+  header{
+    margin: 0 .2em;
+  }
+  section{
+    padding: 0 .2em;
+
+  }
+}
