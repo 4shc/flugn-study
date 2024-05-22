@@ -21,5 +21,5 @@ Como sabras este es el nuevo proyecto que sustituye al DEV4S que creamos en un i
 #
 
 # Utilidades
-- Estructura de carpetas que vamos a usar implementar https://www.youtube.com/watch?v=jpvNc4yPaNU
+- Estructura de carpetas base de la cual partimos (-a cambiado!-) https://www.youtube.com/watch?v=jpvNc4yPaNU
 

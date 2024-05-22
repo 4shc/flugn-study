@@ -1,6 +1,10 @@
 
 const imgData = [
   {
+    id : 0,
+    imgUrl :  "src/assets/img/slider-git/git-0.jpeg"
+  },
+  {
     id : 1,
     imgUrl :  "src/assets/img/slider-git/git-1.jpeg"
   },
@@ -15,6 +19,10 @@ const imgData = [
   {
     id : 4,
     imgUrl :  "src/assets/img/slider-git/git-4.jpeg"
+  },
+  {
+    id : 5,
+    imgUrl :  "src/assets/img/slider-git/git-5.jpeg"
   }
 ]
 
